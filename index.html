@@ -156,11 +156,11 @@
         <h1 id="消隐概述"><a href="#消隐概述" class="headerlink" title="消隐概述"></a>消隐概述</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><blockquote>
 <p>当我们在观察一个物体时，只能看到朝向我们的那些面，其余的表面由于被遮挡所以看不到。<br>如果把遮挡和未被遮挡的都画出来，就会造成歧义</p>
 </blockquote>
-<p><img src="image/%E6%AD%A7%E4%B9%89.jpg" alt="歧义"></p>
+<p><img src="/.com//%E6%AD%A7%E4%B9%89.jpg" alt="歧义"></p>
 <blockquote>
 <p>这种消除隐藏线和隐藏面的过程叫做消隐</p>
 </blockquote>
-<p><img src="image/%E4%BD%8D%E7%BD%AE.jpg" alt="位置"></p>
+<p><img src="/.com//%E4%BD%8D%E7%BD%AE.jpg" alt="位置"></p>
 <h2 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h2><ul>
 <li><p>排序</p>
 <blockquote>
@@ -175,7 +175,7 @@
 </ul>
 <h2 id="假设"><a href="#假设" class="headerlink" title="假设"></a>假设</h2><ul>
 <li>投影平面是xoy面</li>
-<li>z值越大，离视点越近<br><img src="image/%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg" alt="">  <h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h3 id="按消隐对象"><a href="#按消隐对象" class="headerlink" title="按消隐对象"></a>按消隐对象</h3></li>
+<li>z值越大，离视点越近<br><img src="/.com//%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg" alt>  <h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h3 id="按消隐对象"><a href="#按消隐对象" class="headerlink" title="按消隐对象"></a>按消隐对象</h3></li>
 <li>线消隐</li>
 <li>面消隐</li>
 </ul>
@@ -212,8 +212,8 @@
 </blockquote>
 </li>
 </ul>
-<p><img src="image/%E7%BC%93%E5%AD%98.jpg" alt=""></p>
-<h2 id="算法过程"><a href="#算法过程" class="headerlink" title="算法过程"></a>算法过程</h2><p><img src="image/z%E6%B5%81%E7%A8%8B.jpg" alt=""></p>
+<p><img src="/.com//%E7%BC%93%E5%AD%98.jpg" alt></p>
+<h2 id="算法过程"><a href="#算法过程" class="headerlink" title="算法过程"></a>算法过程</h2><p><img src="/.com//z%E6%B5%81%E7%A8%8B.jpg" alt></p>
 <h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><ul>
 <li>占用空间大</li>
 <li>没有利用图形的相关性与连续性，这是z-buffer算法 的严重缺陷</li>
@@ -224,7 +224,7 @@
 </blockquote>
 </li>
 </ul>
-<p><img src="image/z%E6%94%B9%E8%BF%9B1.jpg" alt=""></p>
+<p><img src="/.com//z%E6%94%B9%E8%BF%9B1.jpg" alt></p>
 <ul>
 <li><p>z缓存压缩为一条线（扫描线z-buffer算法） 利用连贯性</p>
 <blockquote>
@@ -233,7 +233,7 @@
 <blockquote>
 <p>扫描线上的后继点深度值是用前一个点来算的</p>
 </blockquote>
-<p><img src="image/%E5%90%8E%E7%BB%A7%E7%82%B91.jpg" alt=""><br><img src="image/%E5%90%8E%E7%BB%A7%E7%82%B92.jpg" alt=""></p>
+<p><img src="/.com//%E5%90%8E%E7%BB%A7%E7%82%B91.jpg" alt><br><img src="/.com//%E5%90%8E%E7%BB%A7%E7%82%B92.jpg" alt></p>
 <h1 id="区间扫描线算法"><a href="#区间扫描线算法" class="headerlink" title="区间扫描线算法"></a>区间扫描线算法</h1><h2 id="与扫描线z-buffer区别"><a href="#与扫描线z-buffer区别" class="headerlink" title="与扫描线z-buffer区别"></a>与扫描线z-buffer区别</h2></li>
 <li><p>扫描线z-buffer</p>
 <blockquote>
@@ -245,17 +245,17 @@
 </li>
 <li><p>区间扫描算法</p>
 <blockquote>
-<p>先求出所有多边形在这条扫描线上的相交区间，对每个区间处理，处理单位为区间。<br><img src="image/%E5%8C%BA%E9%97%B4%E6%89%AB%E6%8F%8F%E7%BA%BF.jpg" alt=""><br><strong>将像素计算改为逐段计算，效率大大提高</strong></p>
+<p>先求出所有多边形在这条扫描线上的相交区间，对每个区间处理，处理单位为区间。<br><img src="/.com//%E5%8C%BA%E9%97%B4%E6%89%AB%E6%8F%8F%E7%BA%BF.jpg" alt><br><strong>将像素计算改为逐段计算，效率大大提高</strong></p>
 </blockquote>
 <h2 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h2></li>
 <li><p>贯穿 </p>
-<p><img src="image/%E8%B4%AF%E7%A9%BF.jpg" alt=""></p>
+<p><img src="/.com//%E8%B4%AF%E7%A9%BF.jpg" alt></p>
 <blockquote>
 <p>补边 即虚线部分也看作一条边，求扫面线交点时也要算入其内</p>
 </blockquote>
 </li>
 <li><p>循环遮挡</p>
-<p><img src="image/%E5%BE%AA%E7%8E%AF%E9%81%AE%E6%8C%A1.jpg" alt=""></p>
+<p><img src="/.com//%E5%BE%AA%E7%8E%AF%E9%81%AE%E6%8C%A1.jpg" alt></p>
 <blockquote>
 <p>将多边形进行划分（不是很懂）</p>
 </blockquote>
