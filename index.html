@@ -60,6 +60,8 @@
 	        
 				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 	        
+				<li><a href="/categories">categories</a></li>
+	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
@@ -102,6 +104,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -111,12 +115,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="https://knsrz.github.io/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="https://knsrz.github.io/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/categories">categories</a></li>
 		        
 				</ul>
 			</nav>
@@ -240,111 +246,10 @@
 <p>生成    hexo g</p>
 <p>发布    hexo d</p>
 <hr>
-<h1 id="外链播放器"><a href="#外链播放器" class="headerlink" title="外链播放器"></a>外链播放器</h1><p>1.直接使用音乐网站提供的html代码</p>
-<p>2.使用 hexo-tag-aplayer 插件</p>
-<blockquote>
-<p>安装</p>
-</blockquote>
-<pre><code>$ npm install --save hexo-tag-aplayer</code></pre><blockquote>
-<p>Hexo 配置文件 _config.yml 中设置：</p>
-</blockquote>
-<pre><code>aplayer:
- meting: true</code></pre><blockquote>
-<p>接着就可以 在文章中使用 MetingJS 播放器了，例如打开网易云音乐网站找到这首coldplay的《Viva la Vida》，从url中可以得到其id为3986040，按下面格式即可使用：</p>
-</blockquote>
-<pre><code>{% meting "3986040" "netease" "song" "theme:#555" "mutex:true" "listmaxheight:340px" "preload:auto" %}</code></pre><blockquote>
-<p>再来一个歌单模板：</p>
-</blockquote>
-<pre><code>{% meting "627070825" "netease" "playlist" "theme:#555" "mutex:true" "listmaxheight:340px" "preload:auto" %}</code></pre><table>
-<thead>
-<tr>
-<th>选项</th>
-<th>默认值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>id</td>
-<td>必须值</td>
-<td>歌曲 id / 播放列表 id / 相册 id / 搜索关键字</td>
-</tr>
-<tr>
-<td>server</td>
-<td>必须值</td>
-<td>音乐平台: netease, tencent, kugou, xiami, baidu</td>
-</tr>
-<tr>
-<td>type</td>
-<td>必须值</td>
-<td>song, playlist, album, search, artist</td>
-</tr>
-<tr>
-<td>fixed</td>
-<td>false</td>
-<td>开启固定模式</td>
-</tr>
-<tr>
-<td>mini</td>
-<td>false</td>
-<td>开启迷你模式</td>
-</tr>
-<tr>
-<td>loop</td>
-<td>all</td>
-<td>列表循环模式：all, one,none</td>
-</tr>
-<tr>
-<td>order</td>
-<td>list</td>
-<td>列表播放模式： list, random</td>
-</tr>
-<tr>
-<td>volume</td>
-<td>0.7</td>
-<td>播放器音量</td>
-</tr>
-<tr>
-<td>lrctype</td>
-<td>0</td>
-<td>歌词格式类型</td>
-</tr>
-<tr>
-<td>listfolded</td>
-<td>false</td>
-<td>指定音乐播放列表是否折叠</td>
-</tr>
-<tr>
-<td>storagename</td>
-<td>metingjs</td>
-<td>LocalStorage 中存储播放器设定的键名</td>
-</tr>
-<tr>
-<td>autoplay</td>
-<td>true</td>
-<td>自动播放，移动端浏览器暂时不支持此功能</td>
-</tr>
-<tr>
-<td>mutex</td>
-<td>true</td>
-<td>该选项开启时，如果同页面有其他 aplayer 播放，该播放器会暂停</td>
-</tr>
-<tr>
-<td>listmaxheight</td>
-<td>340px</td>
-<td>播放列表的最大长度</td>
-</tr>
-<tr>
-<td>preload</td>
-<td>auto</td>
-<td>音乐文件预载入模式，可选项： none, metadata, auto</td>
-</tr>
-<tr>
-<td>theme</td>
-<td>#ad7a86</td>
-<td>播放器风格色彩设置</td>
-</tr>
-</tbody></table>
-
+<h1 id="文章截断"><a href="#文章截断" class="headerlink" title="文章截断"></a>文章截断</h1>
+        
+          <a class="article-more-a" href="/2021/05/23/hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/#more">more >></a>
+        
       
 
       
