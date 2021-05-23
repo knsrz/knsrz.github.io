@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>hexo博客框架使用总结 | 柯南是忍者</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#文章创建发布 新建文章 hexo n ‘title’清理缓存 hexo clean生成    hexo g发布    hexo d  #外链播放器1.直接使用音乐网站提供的html代码2.使用 hexo-tag-aplayer 插件  安装$ npm install --save hexo-tag-aplayer   Hexo 配置文件 _config.yml 中设置：aplayer:   me">
+  <meta name="description" content="文章创建发布新建文章 hexo n ‘title’ 清理缓存 hexo clean 生成    hexo g 发布    hexo d  外链播放器1.直接使用音乐网站提供的html代码 2.使用 hexo-tag-aplayer 插件  安装  $ npm install --save hexo-tag-aplayer  Hexo 配置文件 _config.yml 中设置：  aplayer:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo博客框架使用总结">
 <meta property="og:url" content="http://yoursite.com/2021/05/23/hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="柯南是忍者">
-<meta property="og:description" content="#文章创建发布 新建文章 hexo n ‘title’清理缓存 hexo clean生成    hexo g发布    hexo d  #外链播放器1.直接使用音乐网站提供的html代码2.使用 hexo-tag-aplayer 插件  安装$ npm install --save hexo-tag-aplayer   Hexo 配置文件 _config.yml 中设置：aplayer:   me">
+<meta property="og:description" content="文章创建发布新建文章 hexo n ‘title’ 清理缓存 hexo clean 生成    hexo g 发布    hexo d  外链播放器1.直接使用音乐网站提供的html代码 2.使用 hexo-tag-aplayer 插件  安装  $ npm install --save hexo-tag-aplayer  Hexo 配置文件 _config.yml 中设置：  aplayer:">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-05-23T05:50:48.000Z">
-<meta property="article:modified_time" content="2021-05-23T06:06:42.450Z">
+<meta property="article:modified_time" content="2021-05-23T06:13:23.273Z">
 <meta property="article:author" content="柯南是忍者">
 <meta name="twitter:card" content="summary">
   
@@ -155,24 +155,125 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#文章创建发布</p>
-<p>新建文章 hexo n ‘title’<br>清理缓存 hexo clean<br>生成    hexo g<br>发布    hexo d</p>
+        <h1 id="文章创建发布"><a href="#文章创建发布" class="headerlink" title="文章创建发布"></a>文章创建发布</h1><p>新建文章 hexo n ‘title’</p>
+<p>清理缓存 hexo clean</p>
+<p>生成    hexo g</p>
+<p>发布    hexo d</p>
 <hr>
-<p>#外链播放器<br>1.直接使用音乐网站提供的html代码<br>2.使用 hexo-tag-aplayer 插件</p>
+<h1 id="外链播放器"><a href="#外链播放器" class="headerlink" title="外链播放器"></a>外链播放器</h1><p>1.直接使用音乐网站提供的html代码</p>
+<p>2.使用 hexo-tag-aplayer 插件</p>
 <blockquote>
-<p>安装<br><code>$ npm install --save hexo-tag-aplayer</code></p>
+<p>安装</p>
 </blockquote>
+<p><code>$ npm install --save hexo-tag-aplayer</code></p>
 <blockquote>
-<p>Hexo 配置文件 _config.yml 中设置：<br><code>aplayer:
-  meting: true</code><br>接着就可以 在文章中使用 MetingJS 播放器了，例如打开网易云音乐网站找到这首coldplay的《Viva la Vida》，从url中可以得到其id为3986040，按下面格式即可使用：<br><code>
-    <div id="aplayer-zZlshQNj" class="aplayer aplayer-tag-marker meting-tag-marker"
+<p>Hexo 配置文件 _config.yml 中设置：</p>
+</blockquote>
+<p><code>aplayer:
+  meting: true</code></p>
+<blockquote>
+<p>接着就可以 在文章中使用 MetingJS 播放器了，例如打开网易云音乐网站找到这首coldplay的《Viva la Vida》，从url中可以得到其id为3986040，按下面格式即可使用：</p>
+</blockquote>
+<p><code>
+    <div id="aplayer-qsnqJorF" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="3986040" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"
-    ></div></code><br>再来一个歌单模板：<br><code>
-    <div id="aplayer-SSRnLude" class="aplayer aplayer-tag-marker meting-tag-marker"
+    ></div></code></p>
+<blockquote>
+<p>再来一个歌单模板：</p>
+</blockquote>
+<p><code>
+    <div id="aplayer-mLWwNkgV" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="627070825" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"
     ></div></code></p>
-</blockquote>
-<p>|选项    |默认值    |描述|<br>|id    |必须值    |歌曲 id / 播放列表 id / 相册 id / 搜索关键字|<br>|server    |必须值    |音乐平台: netease, tencent, kugou, xiami, baidu|<br>|type    |必须值    |song, playlist, album, search, artist|<br>|fixed    |false    |开启固定模式|<br>|mini    |false    |开启迷你模式|<br>|loop    |all    |列表循环模式：all, one,none|<br>|order    |list    |列表播放模式： list, random|<br>|volume    |0.7    |播放器音量|<br>|lrctype    |0    |歌词格式类型|<br>|listfolded    |false    |指定音乐播放列表是否折叠|<br>|storagename    |metingjs    |LocalStorage 中存储播放器设定的键名|<br>|autoplay    |true    |自动播放，移动端浏览器暂时不支持此功能|<br>|mutex    |true    |该选项开启时，如果同页面有其他 aplayer 播放，该播放器会暂停|<br>|listmaxheight    |340px    |播放列表的最大长度|<br>|preload    |auto    |音乐文件预载入模式，可选项： none, metadata, auto|<br>|theme    |#ad7a86    |播放器风格色彩设置|</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>id</td>
+<td>必须值</td>
+<td>歌曲 id / 播放列表 id / 相册 id / 搜索关键字</td>
+</tr>
+<tr>
+<td>server</td>
+<td>必须值</td>
+<td>音乐平台: netease, tencent, kugou, xiami, baidu</td>
+</tr>
+<tr>
+<td>type</td>
+<td>必须值</td>
+<td>song, playlist, album, search, artist</td>
+</tr>
+<tr>
+<td>fixed</td>
+<td>false</td>
+<td>开启固定模式</td>
+</tr>
+<tr>
+<td>mini</td>
+<td>false</td>
+<td>开启迷你模式</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>all</td>
+<td>列表循环模式：all, one,none</td>
+</tr>
+<tr>
+<td>order</td>
+<td>list</td>
+<td>列表播放模式： list, random</td>
+</tr>
+<tr>
+<td>volume</td>
+<td>0.7</td>
+<td>播放器音量</td>
+</tr>
+<tr>
+<td>lrctype</td>
+<td>0</td>
+<td>歌词格式类型</td>
+</tr>
+<tr>
+<td>listfolded</td>
+<td>false</td>
+<td>指定音乐播放列表是否折叠</td>
+</tr>
+<tr>
+<td>storagename</td>
+<td>metingjs</td>
+<td>LocalStorage 中存储播放器设定的键名</td>
+</tr>
+<tr>
+<td>autoplay</td>
+<td>true</td>
+<td>自动播放，移动端浏览器暂时不支持此功能</td>
+</tr>
+<tr>
+<td>mutex</td>
+<td>true</td>
+<td>该选项开启时，如果同页面有其他 aplayer 播放，该播放器会暂停</td>
+</tr>
+<tr>
+<td>listmaxheight</td>
+<td>340px</td>
+<td>播放列表的最大长度</td>
+</tr>
+<tr>
+<td>preload</td>
+<td>auto</td>
+<td>音乐文件预载入模式，可选项： none, metadata, auto</td>
+</tr>
+<tr>
+<td>theme</td>
+<td>#ad7a86</td>
+<td>播放器风格色彩设置</td>
+</tr>
+</tbody></table>
 
       
 
