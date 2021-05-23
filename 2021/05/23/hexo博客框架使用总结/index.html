@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>hexo博客框架使用总结 | 柯南是忍者</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="文章创建发布新建文章 hexo n ‘title’ 清理缓存 hexo clean 生成    hexo g 发布    hexo d  外链播放器1.直接使用音乐网站提供的html代码 2.使用 hexo-tag-aplayer 插件  安装  $ npm install --save hexo-tag-aplayer  Hexo 配置文件 _config.yml 中设置：  aplayer:">
+  <meta name="description" content="文章创建发布新建文章 hexo n ‘title’ 清理缓存 hexo clean 生成    hexo g 发布    hexo d  外链播放器1.直接使用音乐网站提供的html代码 2.使用 hexo-tag-aplayer 插件  安装  $ npm install --save hexo-tag-aplayer Hexo 配置文件 _config.yml 中设置：  aplayer:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo博客框架使用总结">
 <meta property="og:url" content="http://yoursite.com/2021/05/23/hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="柯南是忍者">
-<meta property="og:description" content="文章创建发布新建文章 hexo n ‘title’ 清理缓存 hexo clean 生成    hexo g 发布    hexo d  外链播放器1.直接使用音乐网站提供的html代码 2.使用 hexo-tag-aplayer 插件  安装  $ npm install --save hexo-tag-aplayer  Hexo 配置文件 _config.yml 中设置：  aplayer:">
+<meta property="og:description" content="文章创建发布新建文章 hexo n ‘title’ 清理缓存 hexo clean 生成    hexo g 发布    hexo d  外链播放器1.直接使用音乐网站提供的html代码 2.使用 hexo-tag-aplayer 插件  安装  $ npm install --save hexo-tag-aplayer Hexo 配置文件 _config.yml 中设置：  aplayer:">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-05-23T05:50:48.000Z">
-<meta property="article:modified_time" content="2021-05-23T06:14:58.290Z">
+<meta property="article:modified_time" content="2021-05-23T06:19:07.418Z">
 <meta property="article:author" content="柯南是忍者">
 <meta name="twitter:card" content="summary">
   
@@ -36,10 +36,7 @@
 
   
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
-<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
-<script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
-</head>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -165,27 +162,17 @@
 <blockquote>
 <p>安装</p>
 </blockquote>
-<p><code>$ npm install --save hexo-tag-aplayer</code></p>
-<blockquote>
+<pre><code>$ npm install --save hexo-tag-aplayer</code></pre><blockquote>
 <p>Hexo 配置文件 _config.yml 中设置：</p>
 </blockquote>
-<p><code>aplayer:
-  meting: true</code></p>
-<blockquote>
+<pre><code>aplayer:
+ meting: true</code></pre><blockquote>
 <p>接着就可以 在文章中使用 MetingJS 播放器了，例如打开网易云音乐网站找到这首coldplay的《Viva la Vida》，从url中可以得到其id为3986040，按下面格式即可使用：</p>
 </blockquote>
-<p><code>
-    <div id="aplayer-VOEFJfSC" class="aplayer aplayer-tag-marker meting-tag-marker"
-         data-id="3986040" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"
-    ></div></code></p>
-<blockquote>
+<pre><code>{% meting "3986040" "netease" "song" "theme:#555" "mutex:true" "listmaxheight:340px" "preload:auto" %}</code></pre><blockquote>
 <p>再来一个歌单模板：</p>
 </blockquote>
-<p><code>
-    <div id="aplayer-twYCRXDE" class="aplayer aplayer-tag-marker meting-tag-marker"
-         data-id="627070825" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"
-    ></div></code></p>
-<table>
+<pre><code>{% meting "627070825" "netease" "playlist" "theme:#555" "mutex:true" "listmaxheight:340px" "preload:auto" %}</code></pre><table>
 <thead>
 <tr>
 <th>选项</th>

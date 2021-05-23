@@ -163,27 +163,17 @@
 <blockquote>
 <p>安装</p>
 </blockquote>
-<p><code>$ npm install --save hexo-tag-aplayer</code></p>
-<blockquote>
+<pre><code>$ npm install --save hexo-tag-aplayer</code></pre><blockquote>
 <p>Hexo 配置文件 _config.yml 中设置：</p>
 </blockquote>
-<p><code>aplayer:
-  meting: true</code></p>
-<blockquote>
+<pre><code>aplayer:
+ meting: true</code></pre><blockquote>
 <p>接着就可以 在文章中使用 MetingJS 播放器了，例如打开网易云音乐网站找到这首coldplay的《Viva la Vida》，从url中可以得到其id为3986040，按下面格式即可使用：</p>
 </blockquote>
-<p><code>
-    <div id="aplayer-VOEFJfSC" class="aplayer aplayer-tag-marker meting-tag-marker"
-         data-id="3986040" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"
-    ></div></code></p>
-<blockquote>
+<pre><code>{% meting "3986040" "netease" "song" "theme:#555" "mutex:true" "listmaxheight:340px" "preload:auto" %}</code></pre><blockquote>
 <p>再来一个歌单模板：</p>
 </blockquote>
-<p><code>
-    <div id="aplayer-twYCRXDE" class="aplayer aplayer-tag-marker meting-tag-marker"
-         data-id="627070825" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"
-    ></div></code></p>
-<table>
+<pre><code>{% meting "627070825" "netease" "playlist" "theme:#555" "mutex:true" "listmaxheight:340px" "preload:auto" %}</code></pre><table>
 <thead>
 <tr>
 <th>选项</th>
