@@ -6,19 +6,31 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>hexo博客框架使用总结 | 柯南是忍者</title>
+  <title>图形学--消隐 | 柯南是忍者</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="文章创建发布新建文章 hexo n ‘title’ 清理缓存 hexo clean 生成    hexo g 发布    hexo d  外链播放器1.直接使用音乐网站提供的html代码 2.使用 hexo-tag-aplayer 插件  安装  $ npm install --save hexo-tag-aplayer Hexo 配置文件 _config.yml 中设置：  aplayer:">
+  <meta name="description" content="消隐概述概念 当我们在观察一个物体时，只能看到朝向我们的那些面，其余的表面由于被遮挡所以看不到。如果把遮挡和未被遮挡的都画出来，就会造成歧义    这种消除隐藏线和隐藏面的过程叫做消隐   原则 排序  按照与视点远近排序，确定遮挡关系   连贯性  物体内的图像局部保持不变的一种性质    假设 投影平面是xoy面 z值越大，离视点越近  分类按消隐对象 线消隐 面消隐  按消隐空间 图像空间消">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo博客框架使用总结">
-<meta property="og:url" content="http://yoursite.com/2021/05/23/hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:title" content="图形学--消隐">
+<meta property="og:url" content="http://yoursite.com/2021/05/23/%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E6%B6%88%E9%9A%90/index.html">
 <meta property="og:site_name" content="柯南是忍者">
-<meta property="og:description" content="文章创建发布新建文章 hexo n ‘title’ 清理缓存 hexo clean 生成    hexo g 发布    hexo d  外链播放器1.直接使用音乐网站提供的html代码 2.使用 hexo-tag-aplayer 插件  安装  $ npm install --save hexo-tag-aplayer Hexo 配置文件 _config.yml 中设置：  aplayer:">
+<meta property="og:description" content="消隐概述概念 当我们在观察一个物体时，只能看到朝向我们的那些面，其余的表面由于被遮挡所以看不到。如果把遮挡和未被遮挡的都画出来，就会造成歧义    这种消除隐藏线和隐藏面的过程叫做消隐   原则 排序  按照与视点远近排序，确定遮挡关系   连贯性  物体内的图像局部保持不变的一种性质    假设 投影平面是xoy面 z值越大，离视点越近  分类按消隐对象 线消隐 面消隐  按消隐空间 图像空间消">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-05-23T05:50:48.000Z">
-<meta property="article:modified_time" content="2021-05-23T06:19:07.418Z">
+<meta property="og:image" content="http://yoursite.com/2021/05/23/%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E6%B6%88%E9%9A%90/image/%E6%AD%A7%E4%B9%89.jpg">
+<meta property="og:image" content="http://yoursite.com/2021/05/23/%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E6%B6%88%E9%9A%90/image/%E4%BD%8D%E7%BD%AE.jpg">
+<meta property="og:image" content="http://yoursite.com/2021/05/23/%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E6%B6%88%E9%9A%90/image/%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg">
+<meta property="og:image" content="http://yoursite.com/2021/05/23/%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E6%B6%88%E9%9A%90/image/%E7%BC%93%E5%AD%98.jpg">
+<meta property="og:image" content="http://yoursite.com/2021/05/23/%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E6%B6%88%E9%9A%90/image/z%E6%B5%81%E7%A8%8B.jpg">
+<meta property="og:image" content="http://yoursite.com/2021/05/23/%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E6%B6%88%E9%9A%90/image/z%E6%94%B9%E8%BF%9B1.jpg">
+<meta property="og:image" content="http://yoursite.com/2021/05/23/%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E6%B6%88%E9%9A%90/image/%E5%90%8E%E7%BB%A7%E7%82%B91.jpg">
+<meta property="og:image" content="http://yoursite.com/2021/05/23/%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E6%B6%88%E9%9A%90/image/%E5%90%8E%E7%BB%A7%E7%82%B92.jpg">
+<meta property="og:image" content="http://yoursite.com/2021/05/23/%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E6%B6%88%E9%9A%90/image/%E5%8C%BA%E9%97%B4%E6%89%AB%E6%8F%8F%E7%BA%BF.jpg">
+<meta property="og:image" content="http://yoursite.com/2021/05/23/%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E6%B6%88%E9%9A%90/image/%E8%B4%AF%E7%A9%BF.jpg">
+<meta property="og:image" content="http://yoursite.com/2021/05/23/%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E6%B6%88%E9%9A%90/image/%E5%BE%AA%E7%8E%AF%E9%81%AE%E6%8C%A1.jpg">
+<meta property="article:published_time" content="2021-05-23T10:03:23.000Z">
+<meta property="article:modified_time" content="2021-05-23T12:19:50.971Z">
 <meta property="article:author" content="柯南是忍者">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2021/05/23/%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E6%B6%88%E9%9A%90/image/%E6%AD%A7%E4%B9%89.jpg">
   
     <link rel="alternative" href="/atom.xml" title="柯南是忍者" type="application/atom+xml">
   
@@ -132,135 +144,150 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hexo博客框架使用总结" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-图形学-消隐" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      hexo博客框架使用总结
+      图形学--消隐
     </h1>
   
 
         
-        <a href="/2021/05/23/hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2021-05-23T05:50:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-23</time>
+        <a href="/2021/05/23/%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E6%B6%88%E9%9A%90/" class="archive-article-date">
+  	<time datetime="2021-05-23T10:03:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="文章创建发布"><a href="#文章创建发布" class="headerlink" title="文章创建发布"></a>文章创建发布</h1><p>新建文章 hexo n ‘title’</p>
-<p>清理缓存 hexo clean</p>
-<p>生成    hexo g</p>
-<p>发布    hexo d</p>
-<hr>
-<h1 id="外链播放器"><a href="#外链播放器" class="headerlink" title="外链播放器"></a>外链播放器</h1><p>1.直接使用音乐网站提供的html代码</p>
-<p>2.使用 hexo-tag-aplayer 插件</p>
+        <h1 id="消隐概述"><a href="#消隐概述" class="headerlink" title="消隐概述"></a>消隐概述</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><blockquote>
+<p>当我们在观察一个物体时，只能看到朝向我们的那些面，其余的表面由于被遮挡所以看不到。<br>如果把遮挡和未被遮挡的都画出来，就会造成歧义</p>
+</blockquote>
+<p><img src="image/%E6%AD%A7%E4%B9%89.jpg" alt="歧义"></p>
 <blockquote>
-<p>安装</p>
+<p>这种消除隐藏线和隐藏面的过程叫做消隐</p>
 </blockquote>
-<pre><code>$ npm install --save hexo-tag-aplayer</code></pre><blockquote>
-<p>Hexo 配置文件 _config.yml 中设置：</p>
+<p><img src="image/%E4%BD%8D%E7%BD%AE.jpg" alt="位置"></p>
+<h2 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h2><ul>
+<li><p>排序</p>
+<blockquote>
+<p>按照与视点远近排序，确定遮挡关系</p>
 </blockquote>
-<pre><code>aplayer:
- meting: true</code></pre><blockquote>
-<p>接着就可以 在文章中使用 MetingJS 播放器了，例如打开网易云音乐网站找到这首coldplay的《Viva la Vida》，从url中可以得到其id为3986040，按下面格式即可使用：</p>
+</li>
+<li><p>连贯性</p>
+<blockquote>
+<p>物体内的图像局部保持不变的一种性质</p>
 </blockquote>
-<pre><code>{% meting "3986040" "netease" "song" "theme:#555" "mutex:true" "listmaxheight:340px" "preload:auto" %}</code></pre><blockquote>
-<p>再来一个歌单模板：</p>
+</li>
+</ul>
+<h2 id="假设"><a href="#假设" class="headerlink" title="假设"></a>假设</h2><ul>
+<li>投影平面是xoy面</li>
+<li>z值越大，离视点越近<br><img src="image/%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg" alt="">  <h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h3 id="按消隐对象"><a href="#按消隐对象" class="headerlink" title="按消隐对象"></a>按消隐对象</h3></li>
+<li>线消隐</li>
+<li>面消隐</li>
+</ul>
+<h3 id="按消隐空间"><a href="#按消隐空间" class="headerlink" title="按消隐空间"></a>按消隐空间</h3><ul>
+<li>图像空间消隐算法</li>
+</ul>
+<blockquote>
+<p>以像素点为处理单位，根据像素点去找景物点。窗口点与视点的连线与三维实体所有交点中距离视点最近的点就是要找的景物点。</p>
+<blockquote>
+<p>代表算法 z-buffeer</p>
 </blockquote>
-<pre><code>{% meting "627070825" "netease" "playlist" "theme:#555" "mutex:true" "listmaxheight:340px" "preload:auto" %}</code></pre><table>
-<thead>
-<tr>
-<th>选项</th>
-<th>默认值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>id</td>
-<td>必须值</td>
-<td>歌曲 id / 播放列表 id / 相册 id / 搜索关键字</td>
-</tr>
-<tr>
-<td>server</td>
-<td>必须值</td>
-<td>音乐平台: netease, tencent, kugou, xiami, baidu</td>
-</tr>
-<tr>
-<td>type</td>
-<td>必须值</td>
-<td>song, playlist, album, search, artist</td>
-</tr>
-<tr>
-<td>fixed</td>
-<td>false</td>
-<td>开启固定模式</td>
-</tr>
-<tr>
-<td>mini</td>
-<td>false</td>
-<td>开启迷你模式</td>
-</tr>
-<tr>
-<td>loop</td>
-<td>all</td>
-<td>列表循环模式：all, one,none</td>
-</tr>
-<tr>
-<td>order</td>
-<td>list</td>
-<td>列表播放模式： list, random</td>
-</tr>
-<tr>
-<td>volume</td>
-<td>0.7</td>
-<td>播放器音量</td>
-</tr>
-<tr>
-<td>lrctype</td>
-<td>0</td>
-<td>歌词格式类型</td>
-</tr>
-<tr>
-<td>listfolded</td>
-<td>false</td>
-<td>指定音乐播放列表是否折叠</td>
-</tr>
-<tr>
-<td>storagename</td>
-<td>metingjs</td>
-<td>LocalStorage 中存储播放器设定的键名</td>
-</tr>
-<tr>
-<td>autoplay</td>
-<td>true</td>
-<td>自动播放，移动端浏览器暂时不支持此功能</td>
-</tr>
-<tr>
-<td>mutex</td>
-<td>true</td>
-<td>该选项开启时，如果同页面有其他 aplayer 播放，该播放器会暂停</td>
-</tr>
-<tr>
-<td>listmaxheight</td>
-<td>340px</td>
-<td>播放列表的最大长度</td>
-</tr>
-<tr>
-<td>preload</td>
-<td>auto</td>
-<td>音乐文件预载入模式，可选项： none, metadata, auto</td>
-</tr>
-<tr>
-<td>theme</td>
-<td>#ad7a86</td>
-<td>播放器风格色彩设置</td>
-</tr>
-</tbody></table>
+</blockquote>
+<ul>
+<li>景物空间消隐算法</li>
+</ul>
+<blockquote>
+<p>以三维实体为处理单位，根据景物点去找像素点。遍历每个物体找到未被遮挡的部分。</p>
+</blockquote>
+<ul>
+<li>景物空间和图像空间混合算法</li>
+</ul>
+<h1 id="深度缓存器算法——z-buffer算法"><a href="#深度缓存器算法——z-buffer算法" class="headerlink" title="深度缓存器算法——z-buffer算法"></a>深度缓存器算法——z-buffer算法</h1><blockquote>
+<p>图像空间消隐算法</p>
+</blockquote>
+<h2 id="两个缓冲器"><a href="#两个缓冲器" class="headerlink" title="两个缓冲器"></a>两个缓冲器</h2><ul>
+<li><p>帧缓冲器</p>
+<blockquote>
+<p>intensity(x,y)—存储可见像素颜色</p>
+</blockquote>
+</li>
+<li><p>深度缓冲器</p>
+<blockquote>
+<p>depth(x,y)—(z-buffer)存储可见像素z坐标</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="image/%E7%BC%93%E5%AD%98.jpg" alt=""></p>
+<h2 id="算法过程"><a href="#算法过程" class="headerlink" title="算法过程"></a>算法过程</h2><p><img src="image/z%E6%B5%81%E7%A8%8B.jpg" alt=""></p>
+<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><ul>
+<li>占用空间大</li>
+<li>没有利用图形的相关性与连续性，这是z-buffer算法 的严重缺陷</li>
+</ul>
+<h2 id="对缓存器的改进"><a href="#对缓存器的改进" class="headerlink" title="对缓存器的改进"></a>对缓存器的改进</h2><ul>
+<li>z缓存压缩为一个点<blockquote>
+<p>只用一个深度缓存变量zb的改进算法（老师未细讲，可略过算法）</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="image/z%E6%94%B9%E8%BF%9B1.jpg" alt=""></p>
+<ul>
+<li><p>z缓存压缩为一条线（扫描线z-buffer算法） 利用连贯性</p>
+<blockquote>
+<p>z缓存时一维数组，长度为屏幕宽度</p>
+</blockquote>
+<blockquote>
+<p>扫描线上的后继点深度值是用前一个点来算的</p>
+</blockquote>
+<p><img src="image/%E5%90%8E%E7%BB%A7%E7%82%B91.jpg" alt=""><br><img src="image/%E5%90%8E%E7%BB%A7%E7%82%B92.jpg" alt=""></p>
+<h1 id="区间扫描线算法"><a href="#区间扫描线算法" class="headerlink" title="区间扫描线算法"></a>区间扫描线算法</h1><h2 id="与扫描线z-buffer区别"><a href="#与扫描线z-buffer区别" class="headerlink" title="与扫描线z-buffer区别"></a>与扫描线z-buffer区别</h2></li>
+<li><p>扫描线z-buffer</p>
+<blockquote>
+<p>对每一条扫描线，顺序处理所有多边形，处理单位仍为像素。</p>
+</blockquote>
+<blockquote>
+<p>一条扫描线上可能包括多个多边形相互遮挡，每次都挨个处理没有意义</p>
+</blockquote>
+</li>
+<li><p>区间扫描算法</p>
+<blockquote>
+<p>先求出所有多边形在这条扫描线上的相交区间，对每个区间处理，处理单位为区间。<br><img src="image/%E5%8C%BA%E9%97%B4%E6%89%AB%E6%8F%8F%E7%BA%BF.jpg" alt=""><br><strong>将像素计算改为逐段计算，效率大大提高</strong></p>
+</blockquote>
+<h2 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h2></li>
+<li><p>贯穿 </p>
+<p><img src="image/%E8%B4%AF%E7%A9%BF.jpg" alt=""></p>
+<blockquote>
+<p>补边 即虚线部分也看作一条边，求扫面线交点时也要算入其内</p>
+</blockquote>
+</li>
+<li><p>循环遮挡</p>
+<p><img src="image/%E5%BE%AA%E7%8E%AF%E9%81%AE%E6%8C%A1.jpg" alt=""></p>
+<blockquote>
+<p>将多边形进行划分（不是很懂）</p>
+</blockquote>
+<h1 id="深度排序算法——画家算法"><a href="#深度排序算法——画家算法" class="headerlink" title="深度排序算法——画家算法"></a>深度排序算法——画家算法</h1><blockquote>
+<p>简单理解就是先画远处的物体，一层一层的画，近处的会遮盖住远处的物体</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><ul>
+<li>屏幕设置成背景色</li>
+<li>按照图形的远近构建<strong>深度优先级表</strong></li>
+<li>按照优先级表逐步绘制物体</li>
+</ul>
+<h2 id="深度优先级表如何创建"><a href="#深度优先级表如何创建" class="headerlink" title="深度优先级表如何创建"></a>深度优先级表如何创建</h2><ul>
+<li>z值越大，越近</li>
+<li>每个多边形都有顶点，不同顶点z值不同，取zmin和zmax</li>
+<li>将所有多边形按照zmin排序</li>
+<li>形成<strong>初级优先级表</strong></li>
+<li>根据遮挡关系，将图形划分，形成<strong>最终优先级表</strong> （如何确定遮挡关系十分复杂 先过）</li>
+<li>N中图形的个数大于等于M</li>
+</ul>
 
       
 
@@ -313,18 +340,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/05/23/%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E6%B6%88%E9%9A%90/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          图形学--消隐
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/05/22/%E9%87%8D%E5%9B%9E%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">重回博客</div>
+    <a href="/2021/05/23/hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo博客框架使用总结</div>
       <i class="icon-circle-right"></i>
     </a>
   

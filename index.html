@@ -133,6 +133,192 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-图形学-消隐" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/05/23/%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E6%B6%88%E9%9A%90/">图形学--消隐</a>
+    </h1>
+  
+
+        
+        <a href="/2021/05/23/%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E6%B6%88%E9%9A%90/" class="archive-article-date">
+  	<time datetime="2021-05-23T10:03:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="消隐概述"><a href="#消隐概述" class="headerlink" title="消隐概述"></a>消隐概述</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><blockquote>
+<p>当我们在观察一个物体时，只能看到朝向我们的那些面，其余的表面由于被遮挡所以看不到。<br>如果把遮挡和未被遮挡的都画出来，就会造成歧义</p>
+</blockquote>
+<p><img src="image/%E6%AD%A7%E4%B9%89.jpg" alt="歧义"></p>
+<blockquote>
+<p>这种消除隐藏线和隐藏面的过程叫做消隐</p>
+</blockquote>
+<p><img src="image/%E4%BD%8D%E7%BD%AE.jpg" alt="位置"></p>
+<h2 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h2><ul>
+<li><p>排序</p>
+<blockquote>
+<p>按照与视点远近排序，确定遮挡关系</p>
+</blockquote>
+</li>
+<li><p>连贯性</p>
+<blockquote>
+<p>物体内的图像局部保持不变的一种性质</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="假设"><a href="#假设" class="headerlink" title="假设"></a>假设</h2><ul>
+<li>投影平面是xoy面</li>
+<li>z值越大，离视点越近<br><img src="image/%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg" alt="">  <h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h3 id="按消隐对象"><a href="#按消隐对象" class="headerlink" title="按消隐对象"></a>按消隐对象</h3></li>
+<li>线消隐</li>
+<li>面消隐</li>
+</ul>
+<h3 id="按消隐空间"><a href="#按消隐空间" class="headerlink" title="按消隐空间"></a>按消隐空间</h3><ul>
+<li>图像空间消隐算法</li>
+</ul>
+<blockquote>
+<p>以像素点为处理单位，根据像素点去找景物点。窗口点与视点的连线与三维实体所有交点中距离视点最近的点就是要找的景物点。</p>
+<blockquote>
+<p>代表算法 z-buffeer</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>景物空间消隐算法</li>
+</ul>
+<blockquote>
+<p>以三维实体为处理单位，根据景物点去找像素点。遍历每个物体找到未被遮挡的部分。</p>
+</blockquote>
+<ul>
+<li>景物空间和图像空间混合算法</li>
+</ul>
+<h1 id="深度缓存器算法——z-buffer算法"><a href="#深度缓存器算法——z-buffer算法" class="headerlink" title="深度缓存器算法——z-buffer算法"></a>深度缓存器算法——z-buffer算法</h1><blockquote>
+<p>图像空间消隐算法</p>
+</blockquote>
+<h2 id="两个缓冲器"><a href="#两个缓冲器" class="headerlink" title="两个缓冲器"></a>两个缓冲器</h2><ul>
+<li><p>帧缓冲器</p>
+<blockquote>
+<p>intensity(x,y)—存储可见像素颜色</p>
+</blockquote>
+</li>
+<li><p>深度缓冲器</p>
+<blockquote>
+<p>depth(x,y)—(z-buffer)存储可见像素z坐标</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="image/%E7%BC%93%E5%AD%98.jpg" alt=""></p>
+<h2 id="算法过程"><a href="#算法过程" class="headerlink" title="算法过程"></a>算法过程</h2><p><img src="image/z%E6%B5%81%E7%A8%8B.jpg" alt=""></p>
+<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><ul>
+<li>占用空间大</li>
+<li>没有利用图形的相关性与连续性，这是z-buffer算法 的严重缺陷</li>
+</ul>
+<h2 id="对缓存器的改进"><a href="#对缓存器的改进" class="headerlink" title="对缓存器的改进"></a>对缓存器的改进</h2><ul>
+<li>z缓存压缩为一个点<blockquote>
+<p>只用一个深度缓存变量zb的改进算法（老师未细讲，可略过算法）</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="image/z%E6%94%B9%E8%BF%9B1.jpg" alt=""></p>
+<ul>
+<li><p>z缓存压缩为一条线（扫描线z-buffer算法） 利用连贯性</p>
+<blockquote>
+<p>z缓存时一维数组，长度为屏幕宽度</p>
+</blockquote>
+<blockquote>
+<p>扫描线上的后继点深度值是用前一个点来算的</p>
+</blockquote>
+<p><img src="image/%E5%90%8E%E7%BB%A7%E7%82%B91.jpg" alt=""><br><img src="image/%E5%90%8E%E7%BB%A7%E7%82%B92.jpg" alt=""></p>
+<h1 id="区间扫描线算法"><a href="#区间扫描线算法" class="headerlink" title="区间扫描线算法"></a>区间扫描线算法</h1><h2 id="与扫描线z-buffer区别"><a href="#与扫描线z-buffer区别" class="headerlink" title="与扫描线z-buffer区别"></a>与扫描线z-buffer区别</h2></li>
+<li><p>扫描线z-buffer</p>
+<blockquote>
+<p>对每一条扫描线，顺序处理所有多边形，处理单位仍为像素。</p>
+</blockquote>
+<blockquote>
+<p>一条扫描线上可能包括多个多边形相互遮挡，每次都挨个处理没有意义</p>
+</blockquote>
+</li>
+<li><p>区间扫描算法</p>
+<blockquote>
+<p>先求出所有多边形在这条扫描线上的相交区间，对每个区间处理，处理单位为区间。<br><img src="image/%E5%8C%BA%E9%97%B4%E6%89%AB%E6%8F%8F%E7%BA%BF.jpg" alt=""><br><strong>将像素计算改为逐段计算，效率大大提高</strong></p>
+</blockquote>
+<h2 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h2></li>
+<li><p>贯穿 </p>
+<p><img src="image/%E8%B4%AF%E7%A9%BF.jpg" alt=""></p>
+<blockquote>
+<p>补边 即虚线部分也看作一条边，求扫面线交点时也要算入其内</p>
+</blockquote>
+</li>
+<li><p>循环遮挡</p>
+<p><img src="image/%E5%BE%AA%E7%8E%AF%E9%81%AE%E6%8C%A1.jpg" alt=""></p>
+<blockquote>
+<p>将多边形进行划分（不是很懂）</p>
+</blockquote>
+<h1 id="深度排序算法——画家算法"><a href="#深度排序算法——画家算法" class="headerlink" title="深度排序算法——画家算法"></a>深度排序算法——画家算法</h1><blockquote>
+<p>简单理解就是先画远处的物体，一层一层的画，近处的会遮盖住远处的物体</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><ul>
+<li>屏幕设置成背景色</li>
+<li>按照图形的远近构建<strong>深度优先级表</strong></li>
+<li>按照优先级表逐步绘制物体</li>
+</ul>
+<h2 id="深度优先级表如何创建"><a href="#深度优先级表如何创建" class="headerlink" title="深度优先级表如何创建"></a>深度优先级表如何创建</h2><ul>
+<li>z值越大，越近</li>
+<li>每个多边形都有顶点，不同顶点z值不同，取zmin和zmax</li>
+<li>将所有多边形按照zmin排序</li>
+<li>形成<strong>初级优先级表</strong></li>
+<li>根据遮挡关系，将图形划分，形成<strong>最终优先级表</strong> （如何确定遮挡关系十分复杂 先过）</li>
+<li>N中图形的个数大于等于M</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/05/23/%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E6%B6%88%E9%9A%90/">点开看看呗⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄ >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hexo博客框架使用总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
