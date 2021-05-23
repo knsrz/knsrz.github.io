@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2021/5 | 柯南是忍者</title>
+  <title>hexo博客框架使用总结 | 柯南是忍者</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="柯南是忍者">
-<meta property="og:url" content="http://yoursite.com/archives/2021/05/index.html">
+  <meta name="description" content="#文章创建发布 新建文章 hexo n ‘title’清理缓存 hexo clean生成    hexo g发布    hexo d  #外链播放器1.直接使用音乐网站提供的html代码2.使用 hexo-tag-aplayer 插件  安装$ npm install --save hexo-tag-aplayer   Hexo 配置文件 _config.yml 中设置：aplayer:   me">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo博客框架使用总结">
+<meta property="og:url" content="http://yoursite.com/2021/05/23/hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="柯南是忍者">
+<meta property="og:description" content="#文章创建发布 新建文章 hexo n ‘title’清理缓存 hexo clean生成    hexo g发布    hexo d  #外链播放器1.直接使用音乐网站提供的html代码2.使用 hexo-tag-aplayer 插件  安装$ npm install --save hexo-tag-aplayer   Hexo 配置文件 _config.yml 中设置：aplayer:   me">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-05-23T05:50:48.000Z">
+<meta property="article:modified_time" content="2021-05-23T06:06:42.450Z">
 <meta property="article:author" content="柯南是忍者">
 <meta name="twitter:card" content="summary">
   
@@ -32,7 +36,10 @@
 
   
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+<script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
+</head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -128,76 +135,132 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-hexo博客框架使用总结" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      hexo博客框架使用总结
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/23/hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" class="archive-article-date">
+
+        
+        <a href="/2021/05/23/hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" class="archive-article-date">
   	<time datetime="2021-05-23T05:50:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-23</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/23/hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">hexo博客框架使用总结</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#文章创建发布</p>
+<p>新建文章 hexo n ‘title’<br>清理缓存 hexo clean<br>生成    hexo g<br>发布    hexo d</p>
+<hr>
+<p>#外链播放器<br>1.直接使用音乐网站提供的html代码<br>2.使用 hexo-tag-aplayer 插件</p>
+<blockquote>
+<p>安装<br><code>$ npm install --save hexo-tag-aplayer</code></p>
+</blockquote>
+<blockquote>
+<p>Hexo 配置文件 _config.yml 中设置：<br><code>aplayer:
+  meting: true</code><br>接着就可以 在文章中使用 MetingJS 播放器了，例如打开网易云音乐网站找到这首coldplay的《Viva la Vida》，从url中可以得到其id为3986040，按下面格式即可使用：<br><code>
+    <div id="aplayer-zZlshQNj" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="3986040" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"
+    ></div></code><br>再来一个歌单模板：<br><code>
+    <div id="aplayer-SSRnLude" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="627070825" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"
+    ></div></code></p>
+</blockquote>
+<p>|选项    |默认值    |描述|<br>|id    |必须值    |歌曲 id / 播放列表 id / 相册 id / 搜索关键字|<br>|server    |必须值    |音乐平台: netease, tencent, kugou, xiami, baidu|<br>|type    |必须值    |song, playlist, album, search, artist|<br>|fixed    |false    |开启固定模式|<br>|mini    |false    |开启迷你模式|<br>|loop    |all    |列表循环模式：all, one,none|<br>|order    |list    |列表播放模式： list, random|<br>|volume    |0.7    |播放器音量|<br>|lrctype    |0    |歌词格式类型|<br>|listfolded    |false    |指定音乐播放列表是否折叠|<br>|storagename    |metingjs    |LocalStorage 中存储播放器设定的键名|<br>|autoplay    |true    |自动播放，移动端浏览器暂时不支持此功能|<br>|mutex    |true    |该选项开启时，如果同页面有其他 aplayer 播放，该播放器会暂停|<br>|listmaxheight    |340px    |播放列表的最大长度|<br>|preload    |auto    |音乐文件预载入模式，可选项： none, metadata, auto|<br>|theme    |#ad7a86    |播放器风格色彩设置|</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>一个还在等待的爱💴<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/支付宝.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/微信.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/22/%E9%87%8D%E5%9B%9E%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2021-05-22T15:43:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-22</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/05/22/%E9%87%8D%E5%9B%9E%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">重回博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/22/%E9%87%8D%E5%9B%9E%E5%8D%9A%E5%AE%A2/">重回博客</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -220,8 +283,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
