@@ -155,104 +155,10 @@
       
         <p><strong>现实中很多东西都是弯的啊</strong></p>
 
-    <div id="aplayer-ozLXnVAP" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1398803136" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
-
-<h1 id="1基本概念"><a href="#1基本概念" class="headerlink" title="1基本概念"></a>1基本概念</h1><h2 id="1-1数学表示方法"><a href="#1-1数学表示方法" class="headerlink" title="1.1数学表示方法"></a>1.1数学表示方法</h2><blockquote>
-<p>两种基本方法</p>
-</blockquote>
-<ul>
-<li>显式表示 y = f(x) 一对x只对应一个y值，所以无法表示封闭曲线</li>
-<li>隐式表示f(x,y)=0 容易判断点是否在曲线上</li>
-</ul>
-<p><strong>这两种表示法有问题，我们不采用</strong><br><img src="https://i.loli.net/2021/05/24/KtICkr7aFuJ1GEM.png" alt="picture 1">  </p>
-<blockquote>
-<p>参数方程</p>
-</blockquote>
-<p><img src="https://i.loli.net/2021/05/24/zaiuhHglcS5WMUv.png" alt="picture 2"><br><img src="https://i.loli.net/2021/05/24/E7vKqmg4k3ocnJ2.png" alt="picture 3">  </p>
-<p>n次样条参数多项式曲线<br><img src="https://i.loli.net/2021/05/24/fiqxEPVyYFmT3aS.png" alt="picture 9">  </p>
-<h2 id="1-2插值-拟合-逼近"><a href="#1-2插值-拟合-逼近" class="headerlink" title="1.2插值 拟合 逼近"></a>1.2插值 拟合 逼近</h2><blockquote>
-<p>插值就是把一组点用线顺序连接起来形成曲线/曲面</p>
-</blockquote>
-<p><img src="https://i.loli.net/2021/05/24/52d1qCzoiu93NJ7.png" alt="picture 4">  </p>
-<blockquote>
-<p>拟合和逼近指在插值过程中为了某种效果而不必一定经过数据点。逼近是一种过程，指无限靠近样本点的过程。拟合是一种结果，指整体靠近后的结果。</p>
-</blockquote>
-<h2 id="1-3连续性"><a href="#1-3连续性" class="headerlink" title="1.3连续性"></a>1.3连续性</h2><p>当很多曲线首位连接，如何保证连接处是连续的呐？于是定义的一些条件来判断是否连续</p>
-<blockquote>
-<p>1.参数连续性</p>
-</blockquote>
-<ul>
-<li>0阶参数连续性</li>
-</ul>
-<p><img src="https://i.loli.net/2021/05/24/DuZR19Q6Ut8aqHO.png" alt="picture 5">  </p>
-<p>i1表示i曲线的末尾 （i+1）0表示下一条曲线的起始</p>
-<ul>
-<li>1阶参数连续性</li>
-</ul>
-<p><img src="https://i.loli.net/2021/05/24/kDFY2bxflmNuS4I.png" alt="picture 6">  </p>
-<ul>
-<li>2阶参数连续性</li>
-</ul>
-<p><img src="https://i.loli.net/2021/05/24/pZQ2Y97tOLefTVb.png" alt="picture 7">  </p>
-<blockquote>
-<p>2.几何连续性</p>
-<blockquote>
-<p>参数连续性要求太高了不好达到，几何连续弱化了要求</p>
-</blockquote>
-</blockquote>
-<ul>
-<li>0阶几何连续性</li>
-</ul>
-<p>同0阶参数连续</p>
-<ul>
-<li>1阶几何连续性</li>
-</ul>
-<p>要求一阶导数成比例</p>
-<p><img src="https://i.loli.net/2021/05/24/FtnVGY6EuvyaAT3.png" alt="picture 8">  </p>
-<ul>
-<li><p>2阶几何连续性</p>
-<pre><code>2阶导数成比例</code></pre></li>
-</ul>
-<h2 id="1-4-三次样条"><a href="#1-4-三次样条" class="headerlink" title="1.4 三次样条"></a>1.4 三次样条</h2><blockquote>
-<p>在表示曲线时，我们一般取n=3的n次多项式曲线，称为三次样条</p>
-</blockquote>
-<p><img src="https://i.loli.net/2021/05/24/vsoXlcP7aRIfikr.png" alt="picture 10">  </p>
-<p>还可以写成<br><img src="https://i.loli.net/2021/05/24/xS3O4Pq6HIitCbE.png" alt="picture 13"><br><strong>注意这里的a3，a2，a1，a0都不是一个常数，而是一个向量，如a3=[ax,ay,az]…</strong></p>
-<blockquote>
-<p>n=3,每一行有四个系数，有3行，所以系数共有3*4=12个，即12个未知量。</p>
-</blockquote>
-<blockquote>
-<p>一个点坐标（x,y,z）对应一个t。一个点坐标可以列出三个方程。四个点坐标可以列出3*4=12个方程。</p>
-</blockquote>
-<blockquote>
-<p>所以可以用n+1个点来求得三次多项式曲线</p>
-</blockquote>
-<p><strong>问题</strong></p>
-<blockquote>
-<p>每个点对应的t如何求？请继续阅读</p>
-</blockquote>
-<h3 id="1-4-1自然三次样条"><a href="#1-4-1自然三次样条" class="headerlink" title="1.4.1自然三次样条"></a>1.4.1自然三次样条</h3><p><img src="https://i.loli.net/2021/05/24/eE2pktcBW56sUr9.png" alt="picture 11">  </p>
-<blockquote>
-<p>简单理解就是自然三次样条过渡十分平滑，满足c2连续性。</p>
-</blockquote>
-<blockquote>
-<p>这种曲线在求对应的t时，可以直接通过点所在的位置按照比例来取t</p>
-</blockquote>
-<p><img src="https://i.loli.net/2021/05/24/3EiuOg7wr2bZWNk.png" alt="picture 12">  </p>
-<blockquote>
-<p>t分别取0,1/2,1</p>
-</blockquote>
-<blockquote>
-<p>自然三次样条只适合点分布均匀的场合</p>
-</blockquote>
-<h3 id="1-4-2三次Hermite样条"><a href="#1-4-2三次Hermite样条" class="headerlink" title="1.4.2三次Hermite样条"></a>1.4.2三次Hermite样条</h3><blockquote>
-<p>我们取这样四个点，P(0)、P(1)和P’(0)、P’(1)。我们知道t的范围0-1。t=0为起始点，t=1为终点。</p>
-</blockquote>
-<blockquote>
-<p>代入第二种形式的三次样条</p>
-</blockquote>
-<p><img src="https://i.loli.net/2021/05/24/gJtc5Uj3D986ahr.png" alt="picture 14"><br><img src="https://i.loli.net/2021/05/24/vcL4jomk71qUV2f.png" alt="picture 15"><br><img src="https://i.loli.net/2021/05/24/hf1EknIDV5GBPts.png" alt="picture 16"><br><img src="https://i.loli.net/2021/05/24/JkMcyKQDZO5bEw6.png" alt="picture 17">  </p>
-<h1 id="Bezier曲线-曲面"><a href="#Bezier曲线-曲面" class="headerlink" title="Bezier曲线/曲面"></a>Bezier曲线/曲面</h1><h1 id="B样条曲线-曲面"><a href="#B样条曲线-曲面" class="headerlink" title="B样条曲线/曲面"></a>B样条曲线/曲面</h1>
+    <div id="aplayer-AbTvTcqT" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1398803136" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
+        
+          <a class="article-more-a" href="/2021/05/24/%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E6%9B%B2%E7%BA%BF%E4%B8%8E%E6%9B%B2%E9%9D%A2/#more">more >></a>
+        
       
 
       
@@ -331,7 +237,10 @@
         <p><strong>今天是我生日</strong></p>
 <p>我的生日是农历4月23，不知道为什么爸妈给我弄了个农历生日…<br><img src="https://i.loli.net/2021/05/24/WBth3UVw48LyGnK.png" alt="picture 1">  </p>
 
-    <div id="aplayer-DgfBzowK" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1464325108" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
+    <div id="aplayer-bjLRkKXY" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1464325108" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
+        
+          <a class="article-more-a" href="/2021/05/24/%E7%94%9F%E6%97%A5/#more">more >></a>
+        
       
 
       
