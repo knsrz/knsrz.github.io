@@ -133,6 +133,124 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-语法分析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/03/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90/">语法分析</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/03/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90/" class="archive-article-date">
+  	<time datetime="2021-06-03T08:18:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1语法分析基本知识"><a href="#1语法分析基本知识" class="headerlink" title="1语法分析基本知识"></a>1语法分析基本知识</h1><h2 id="1-1编译程序总框"><a href="#1-1编译程序总框" class="headerlink" title="1.1编译程序总框"></a>1.1编译程序总框</h2><p><img src="https://i.loli.net/2021/06/03/YGXln4cyeUKuCtH.png" alt="图 1">  </p>
+<h2 id="1-2语法分析前提"><a href="#1-2语法分析前提" class="headerlink" title="1.2语法分析前提"></a>1.2语法分析前提</h2><blockquote>
+<p>用<strong>正规式</strong>和<strong>有限自动机</strong>描述和识别语言的<em>单词符号</em></p>
+</blockquote>
+<blockquote>
+<p>用<strong>上下文无关文法</strong>来描述<em>语法规则</em></p>
+</blockquote>
+<h2 id="1-3上下文无关文法"><a href="#1-3上下文无关文法" class="headerlink" title="1.3上下文无关文法"></a>1.3上下文无关文法</h2><p><img src="https://i.loli.net/2021/06/03/GEDAKVyFL9CNbx5.png" alt="图 2">  </p>
+<h2 id="1-4句子，句型和语言"><a href="#1-4句子，句型和语言" class="headerlink" title="1.4句子，句型和语言"></a>1.4句子，句型和语言</h2><p><img src="https://i.loli.net/2021/06/03/nyE2H7edJzPNk6Z.png" alt="图 3">  </p>
+<blockquote>
+<p>句子时特殊的句型</p>
+</blockquote>
+<h2 id="语法分析的方法"><a href="#语法分析的方法" class="headerlink" title="语法分析的方法"></a>语法分析的方法</h2><p><img src="https://i.loli.net/2021/06/03/I74AykVlzC1S8LK.png" alt="图 5">  </p>
+<h1 id="2语法分析-自上而下"><a href="#2语法分析-自上而下" class="headerlink" title="2语法分析-自上而下"></a>2语法分析-自上而下</h1><h2 id="2-1自上而下分析面临的问题及消除"><a href="#2-1自上而下分析面临的问题及消除" class="headerlink" title="2.1自上而下分析面临的问题及消除"></a>2.1自上而下分析面临的问题及<strong>消除</strong></h2><blockquote>
+<p>回溯问题</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/06/03/asgnUTe18HKcozJ.png" alt="图 6"><br><img src="https://i.loli.net/2021/06/03/6buHzDldtiPrCqT.png" alt="图 7"><br><img src="https://i.loli.net/2021/06/03/TUiqG9cJ1Ev7nBr.png" alt="图 9">  </p>
+<blockquote>
+<p>左递归问题</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/06/03/QObPkiFVzvd85tG.png" alt="图 10">  </p>
+<blockquote>
+<blockquote>
+<p>直接左递归消除</p>
+</blockquote>
+</blockquote>
+<p><img src="https://i.loli.net/2021/06/03/sNLKId2g6mkr7Fh.png" alt="图 11"><br><img src="https://i.loli.net/2021/06/03/HdVlD9xqPGWY6Kr.png" alt="图 12"><br><img src="https://i.loli.net/2021/06/03/iJ7a8PsMzUhHTCO.png" alt="图 13">  </p>
+<blockquote>
+<blockquote>
+<p>间接左递归消除</p>
+</blockquote>
+</blockquote>
+<p><img src="https://i.loli.net/2021/06/03/zVCyH9wWDa2gsRi.png" alt="图 14"><br><img src="https://i.loli.net/2021/06/03/Hcq6TAtNhBE9GUS.png" alt="图 15"><br><em>先把$Q\rightarrow R|b$中的R代换掉</em></p>
+<blockquote>
+<blockquote>
+<p><strong>消除左递归算法</strong></p>
+</blockquote>
+</blockquote>
+<p>1.将所有非终结符按照一定顺序排序</p>
+<p>2.将所有句型化为$P_i \rightarrow a…|P_{i+1}…|P_{i+2}….|…$ 即$P_i$后的非终结符只能为上述顺序之后的非终结符或者自己本身，转化方法就是代换。</p>
+<p>3.消除所有直接左递归</p>
+<p>4.去除从开始符号出发永远无法到 达的非终结符的产生规则<br><img src="https://i.loli.net/2021/06/03/kdlqjYOI7mUcpQ4.png" alt="图 16"><br><img src="https://i.loli.net/2021/06/03/JzE7rKeciupdPlH.png" alt="图 17">  </p>
+<h1 id="3语法分析-自下而上"><a href="#3语法分析-自下而上" class="headerlink" title="3语法分析-自下而上"></a>3语法分析-自下而上</h1>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/编译原理//" class="article-tag-list-link color5">编译原理</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/03/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90/">点开看看呗⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄ >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+  
     <article id="post-六级听力经验总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -901,86 +1019,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/05/23/hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">点开看看呗⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄ >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-  
-    <article id="post-重回博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/05/22/%E9%87%8D%E5%9B%9E%E5%8D%9A%E5%AE%A2/">重回博客</a>
-    </h1>
-  
-
-        
-        <a href="/2021/05/22/%E9%87%8D%E5%9B%9E%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2021-05-22T15:43:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>部署了双栈 分别时coding和GitHub</p>
-<p>测试外挂音乐</p>
-
-    <div id="aplayer-oKcdQDvo" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="526468203" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/日常//" class="article-tag-list-link color3">日常</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/05/22/%E9%87%8D%E5%9B%9E%E5%8D%9A%E5%AE%A2/">点开看看呗⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄ >></a>
         </p>
       
 
