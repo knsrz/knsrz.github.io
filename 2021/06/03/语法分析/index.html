@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="http://yoursite.com/child">
   <title>语法分析 | 柯南是忍者</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1语法分析基本知识1.1编译程序总框   1.2语法分析前提 用正规式和有限自动机描述和识别语言的单词符号   用上下文无关文法来描述语法规则  1.3上下文无关文法   1.4句子，句型和语言    句子时特殊的句型  语法分析的方法   2语法分析-自上而下2.1自上而下分析面临的问题及消除 回溯问题      左递归问题       直接左递归消除        间接左递归消除   先把$Q">
+  <meta name="description" content="1 语法分析基本知识1.1 编译程序总框   1.2 语法分析前提 用正规式和有限自动机描述和识别语言的单词符号   用上下文无关文法来描述语法规则  1.3 上下文无关文法   1.4 句子，句型和语言    句子是特殊的句型  1.5 语法分析的方法   2 语法分析-自上而下2.1 自上而下分析面临的问题及消除2.1.1 回溯问题   提取公共左因子消除回溯     2.1.2 左递归问题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="语法分析">
 <meta property="og:url" content="http://yoursite.com/child/2021/06/03/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90/index.html">
 <meta property="og:site_name" content="柯南是忍者">
-<meta property="og:description" content="1语法分析基本知识1.1编译程序总框   1.2语法分析前提 用正规式和有限自动机描述和识别语言的单词符号   用上下文无关文法来描述语法规则  1.3上下文无关文法   1.4句子，句型和语言    句子时特殊的句型  语法分析的方法   2语法分析-自上而下2.1自上而下分析面临的问题及消除 回溯问题      左递归问题       直接左递归消除        间接左递归消除   先把$Q">
+<meta property="og:description" content="1 语法分析基本知识1.1 编译程序总框   1.2 语法分析前提 用正规式和有限自动机描述和识别语言的单词符号   用上下文无关文法来描述语法规则  1.3 上下文无关文法   1.4 句子，句型和语言    句子是特殊的句型  1.5 语法分析的方法   2 语法分析-自上而下2.1 自上而下分析面临的问题及消除2.1.1 回溯问题   提取公共左因子消除回溯     2.1.2 左递归问题">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://i.loli.net/2021/06/03/YGXln4cyeUKuCtH.png">
 <meta property="og:image" content="https://i.loli.net/2021/06/03/GEDAKVyFL9CNbx5.png">
@@ -22,6 +22,7 @@
 <meta property="og:image" content="https://i.loli.net/2021/06/03/asgnUTe18HKcozJ.png">
 <meta property="og:image" content="https://i.loli.net/2021/06/03/6buHzDldtiPrCqT.png">
 <meta property="og:image" content="https://i.loli.net/2021/06/03/TUiqG9cJ1Ev7nBr.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/04/t8Q5GNUqeyxvC1b.png">
 <meta property="og:image" content="https://i.loli.net/2021/06/03/QObPkiFVzvd85tG.png">
 <meta property="og:image" content="https://i.loli.net/2021/06/03/sNLKId2g6mkr7Fh.png">
 <meta property="og:image" content="https://i.loli.net/2021/06/03/HdVlD9xqPGWY6Kr.png">
@@ -30,8 +31,17 @@
 <meta property="og:image" content="https://i.loli.net/2021/06/03/Hcq6TAtNhBE9GUS.png">
 <meta property="og:image" content="https://i.loli.net/2021/06/03/kdlqjYOI7mUcpQ4.png">
 <meta property="og:image" content="https://i.loli.net/2021/06/03/JzE7rKeciupdPlH.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/04/i6v1oajPLzH9RCT.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/04/YQblpLt7XqwR3Mz.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/04/8gOS9Yp7oLzIGT6.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/05/EiVWJ9U4oAa8hty.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/05/67Vxqa4m8dRz2Jr.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/05/KCLplNJnys2MXhu.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/05/CDIE5kXWQHaGhvy.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/05/Jw9ZDzu2dmfbYsT.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/05/P7umaWT32OyHjEJ.png">
 <meta property="article:published_time" content="2021-06-03T08:18:29.000Z">
-<meta property="article:modified_time" content="2021-06-03T09:27:07.331Z">
+<meta property="article:modified_time" content="2021-06-04T16:19:25.460Z">
 <meta property="article:author" content="柯南是忍者">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.loli.net/2021/06/03/YGXln4cyeUKuCtH.png">
@@ -168,49 +178,70 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1语法分析基本知识"><a href="#1语法分析基本知识" class="headerlink" title="1语法分析基本知识"></a>1语法分析基本知识</h1><h2 id="1-1编译程序总框"><a href="#1-1编译程序总框" class="headerlink" title="1.1编译程序总框"></a>1.1编译程序总框</h2><p><img src="https://i.loli.net/2021/06/03/YGXln4cyeUKuCtH.png" alt="图 1">  </p>
-<h2 id="1-2语法分析前提"><a href="#1-2语法分析前提" class="headerlink" title="1.2语法分析前提"></a>1.2语法分析前提</h2><blockquote>
+        <h1 id="1-语法分析基本知识"><a href="#1-语法分析基本知识" class="headerlink" title="1 语法分析基本知识"></a>1 语法分析基本知识</h1><h2 id="1-1-编译程序总框"><a href="#1-1-编译程序总框" class="headerlink" title="1.1 编译程序总框"></a>1.1 编译程序总框</h2><p><img src="https://i.loli.net/2021/06/03/YGXln4cyeUKuCtH.png" alt="图 1">  </p>
+<h2 id="1-2-语法分析前提"><a href="#1-2-语法分析前提" class="headerlink" title="1.2 语法分析前提"></a>1.2 语法分析前提</h2><blockquote>
 <p>用<strong>正规式</strong>和<strong>有限自动机</strong>描述和识别语言的<em>单词符号</em></p>
 </blockquote>
 <blockquote>
 <p>用<strong>上下文无关文法</strong>来描述<em>语法规则</em></p>
 </blockquote>
-<h2 id="1-3上下文无关文法"><a href="#1-3上下文无关文法" class="headerlink" title="1.3上下文无关文法"></a>1.3上下文无关文法</h2><p><img src="https://i.loli.net/2021/06/03/GEDAKVyFL9CNbx5.png" alt="图 2">  </p>
-<h2 id="1-4句子，句型和语言"><a href="#1-4句子，句型和语言" class="headerlink" title="1.4句子，句型和语言"></a>1.4句子，句型和语言</h2><p><img src="https://i.loli.net/2021/06/03/nyE2H7edJzPNk6Z.png" alt="图 3">  </p>
+<h2 id="1-3-上下文无关文法"><a href="#1-3-上下文无关文法" class="headerlink" title="1.3 上下文无关文法"></a>1.3 上下文无关文法</h2><p><img src="https://i.loli.net/2021/06/03/GEDAKVyFL9CNbx5.png" alt="图 2">  </p>
+<h2 id="1-4-句子，句型和语言"><a href="#1-4-句子，句型和语言" class="headerlink" title="1.4 句子，句型和语言"></a>1.4 句子，句型和语言</h2><p><img src="https://i.loli.net/2021/06/03/nyE2H7edJzPNk6Z.png" alt="图 3">  </p>
 <blockquote>
-<p>句子时特殊的句型</p>
+<p>句子是特殊的句型</p>
 </blockquote>
-<h2 id="语法分析的方法"><a href="#语法分析的方法" class="headerlink" title="语法分析的方法"></a>语法分析的方法</h2><p><img src="https://i.loli.net/2021/06/03/I74AykVlzC1S8LK.png" alt="图 5">  </p>
-<h1 id="2语法分析-自上而下"><a href="#2语法分析-自上而下" class="headerlink" title="2语法分析-自上而下"></a>2语法分析-自上而下</h1><h2 id="2-1自上而下分析面临的问题及消除"><a href="#2-1自上而下分析面临的问题及消除" class="headerlink" title="2.1自上而下分析面临的问题及消除"></a>2.1自上而下分析面临的问题及<strong>消除</strong></h2><blockquote>
-<p>回溯问题</p>
-</blockquote>
-<p><img src="https://i.loli.net/2021/06/03/asgnUTe18HKcozJ.png" alt="图 6"><br><img src="https://i.loli.net/2021/06/03/6buHzDldtiPrCqT.png" alt="图 7"><br><img src="https://i.loli.net/2021/06/03/TUiqG9cJ1Ev7nBr.png" alt="图 9">  </p>
+<h2 id="1-5-语法分析的方法"><a href="#1-5-语法分析的方法" class="headerlink" title="1.5 语法分析的方法"></a>1.5 语法分析的方法</h2><p><img src="https://i.loli.net/2021/06/03/I74AykVlzC1S8LK.png" alt="图 5">  </p>
+<h1 id="2-语法分析-自上而下"><a href="#2-语法分析-自上而下" class="headerlink" title="2 语法分析-自上而下"></a>2 语法分析-自上而下</h1><h2 id="2-1-自上而下分析面临的问题及消除"><a href="#2-1-自上而下分析面临的问题及消除" class="headerlink" title="2.1 自上而下分析面临的问题及消除"></a>2.1 自上而下分析面临的问题及<strong>消除</strong></h2><h3 id="2-1-1-回溯问题"><a href="#2-1-1-回溯问题" class="headerlink" title="2.1.1 回溯问题"></a>2.1.1 回溯问题</h3><p><img src="https://i.loli.net/2021/06/03/asgnUTe18HKcozJ.png" alt="图 6"><br><img src="https://i.loli.net/2021/06/03/6buHzDldtiPrCqT.png" alt="图 7"><br><img src="https://i.loli.net/2021/06/03/TUiqG9cJ1Ev7nBr.png" alt="图 9"> </p>
 <blockquote>
-<p>左递归问题</p>
+<p>提取公共左因子消除回溯</p>
 </blockquote>
-<p><img src="https://i.loli.net/2021/06/03/QObPkiFVzvd85tG.png" alt="图 10">  </p>
-<blockquote>
+<p><img src="https://i.loli.net/2021/06/04/t8Q5GNUqeyxvC1b.png" alt="图 1">  </p>
+<h3 id="2-1-2-左递归问题"><a href="#2-1-2-左递归问题" class="headerlink" title="2.1.2 左递归问题"></a>2.1.2 左递归问题</h3><p><img src="https://i.loli.net/2021/06/03/QObPkiFVzvd85tG.png" alt="图 10">  </p>
 <blockquote>
 <p>直接左递归消除</p>
 </blockquote>
-</blockquote>
 <p><img src="https://i.loli.net/2021/06/03/sNLKId2g6mkr7Fh.png" alt="图 11"><br><img src="https://i.loli.net/2021/06/03/HdVlD9xqPGWY6Kr.png" alt="图 12"><br><img src="https://i.loli.net/2021/06/03/iJ7a8PsMzUhHTCO.png" alt="图 13">  </p>
-<blockquote>
 <blockquote>
 <p>间接左递归消除</p>
 </blockquote>
-</blockquote>
 <p><img src="https://i.loli.net/2021/06/03/zVCyH9wWDa2gsRi.png" alt="图 14"><br><img src="https://i.loli.net/2021/06/03/Hcq6TAtNhBE9GUS.png" alt="图 15"><br><em>先把$Q\rightarrow R|b$中的R代换掉</em></p>
 <blockquote>
-<blockquote>
 <p><strong>消除左递归算法</strong></p>
-</blockquote>
 </blockquote>
 <p>1.将所有非终结符按照一定顺序排序</p>
 <p>2.将所有句型化为$P_i \rightarrow a…|P_{i+1}…|P_{i+2}….|…$ 即$P_i$后的非终结符只能为上述顺序之后的非终结符或者自己本身，转化方法就是代换。</p>
 <p>3.消除所有直接左递归</p>
 <p>4.去除从开始符号出发永远无法到 达的非终结符的产生规则<br><img src="https://i.loli.net/2021/06/03/kdlqjYOI7mUcpQ4.png" alt="图 16"><br><img src="https://i.loli.net/2021/06/03/JzE7rKeciupdPlH.png" alt="图 17">  </p>
-<h1 id="3语法分析-自下而上"><a href="#3语法分析-自下而上" class="headerlink" title="3语法分析-自下而上"></a>3语法分析-自下而上</h1>
+<h2 id="2-2-First集"><a href="#2-2-First集" class="headerlink" title="2.2 First集"></a>2.2 First集</h2><blockquote>
+<p>定义</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/06/04/i6v1oajPLzH9RCT.png" alt="图 2"><br><img src="https://i.loli.net/2021/06/04/YQblpLt7XqwR3Mz.png" alt="图 3">  </p>
+<blockquote>
+<blockquote>
+<p>若要达到上述目标，则需要用到提取公共左因子</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>构造</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/06/04/8gOS9Yp7oLzIGT6.png" alt="图 4">  </p>
+<p>可以简化为<br><img src="https://i.loli.net/2021/06/05/EiVWJ9U4oAa8hty.png" alt="图 5">  </p>
+<h2 id="2-3-Follow集合"><a href="#2-3-Follow集合" class="headerlink" title="2.3 Follow集合"></a>2.3 Follow集合</h2><blockquote>
+<p>用于解决什么问题</p>
+</blockquote>
+<p>考虑<br><img src="https://i.loli.net/2021/06/05/67Vxqa4m8dRz2Jr.png" alt="图 6"><br>为什么当+和$T^,$匹配时要选择$\epsilon$，怎样才能确定我选择了$\epsilon$接下来就能匹配到+</p>
+<blockquote>
+<p>定义</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/06/05/KCLplNJnys2MXhu.png" alt="图 7">  </p>
+<blockquote>
+<p>构造</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/06/05/CDIE5kXWQHaGhvy.png" alt="图 8">  </p>
+<h2 id="2-4-LL（1）文法"><a href="#2-4-LL（1）文法" class="headerlink" title="2.4 LL（1）文法"></a>2.4 LL（1）文法</h2><p><img src="https://i.loli.net/2021/06/05/Jw9ZDzu2dmfbYsT.png" alt="图 9">  </p>
+<p>1.左递归消除方法<br>2.提取左公共因子</p>
+<p><img src="https://i.loli.net/2021/06/05/P7umaWT32OyHjEJ.png" alt="图 10">  </p>
+<h1 id="3-语法分析-自下而上"><a href="#3-语法分析-自下而上" class="headerlink" title="3 语法分析-自下而上"></a>3 语法分析-自下而上</h1>
       
 
       
@@ -302,7 +333,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1语法分析基本知识"><span class="toc-number">1.</span> <span class="toc-text">1语法分析基本知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1编译程序总框"><span class="toc-number">1.1.</span> <span class="toc-text">1.1编译程序总框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2语法分析前提"><span class="toc-number">1.2.</span> <span class="toc-text">1.2语法分析前提</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3上下文无关文法"><span class="toc-number">1.3.</span> <span class="toc-text">1.3上下文无关文法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4句子，句型和语言"><span class="toc-number">1.4.</span> <span class="toc-text">1.4句子，句型和语言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#语法分析的方法"><span class="toc-number">1.5.</span> <span class="toc-text">语法分析的方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2语法分析-自上而下"><span class="toc-number">2.</span> <span class="toc-text">2语法分析-自上而下</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1自上而下分析面临的问题及消除"><span class="toc-number">2.1.</span> <span class="toc-text">2.1自上而下分析面临的问题及消除</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3语法分析-自下而上"><span class="toc-number">3.</span> <span class="toc-text">3语法分析-自下而上</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-语法分析基本知识"><span class="toc-number">1.</span> <span class="toc-text">1 语法分析基本知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-编译程序总框"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 编译程序总框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-语法分析前提"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 语法分析前提</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-上下文无关文法"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 上下文无关文法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-句子，句型和语言"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 句子，句型和语言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-语法分析的方法"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 语法分析的方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-语法分析-自上而下"><span class="toc-number">2.</span> <span class="toc-text">2 语法分析-自上而下</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-自上而下分析面临的问题及消除"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 自上而下分析面临的问题及消除</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1-回溯问题"><span class="toc-number">2.1.1.</span> <span class="toc-text">2.1.1 回溯问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-左递归问题"><span class="toc-number">2.1.2.</span> <span class="toc-text">2.1.2 左递归问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-First集"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 First集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-Follow集合"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 Follow集合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-LL（1）文法"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 LL（1）文法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-语法分析-自下而上"><span class="toc-number">3.</span> <span class="toc-text">3 语法分析-自下而上</span></a></li></ol>
                     </div>
                 </span>
             </div>
